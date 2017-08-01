@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Train Scheduler</title>
+
+<!-- CSS Links -->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css">
+
+	<link rel="stylesheet" href="assets/style.css">
+
+<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+
+<!-- Firebase Link -->
+
+	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+
+<!-- Link to Moment.js should go here -->
+
+	<script type="text/javascript" src= "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+
+</head>
+<body>
+<!-- Header -->
+	<div class="container">
+		<div class="jumbotron">
+			<h1 id="header">Train Schedules</h1>
+		</div>
+
+<!-- Train Schedule Table -->
+
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h3 class="panel-title">Current Train Schedule</h3>
+		</div>
+			<div class="table-responsive">
+				<table class="table" id= "trainData">
+					<thead>
+						<tr>
+							<th>Train Name</th>
+							<th>Destination</th>
+							<th>Frequency (Minutes)</th>
+							<th>Next Arrival</th>
+							<th>Minutes Away</th>
+						</tr>
+					</thead>
+					<tbody class="table-hover">
+						
+					</tbody>
+				</table>
+			</div>
+	</div>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h3 class="panel-title">Add Train</h3>
+		</div>
+		<div class="panel-body">
+			<form>
+			  <div class="form-group">
+			    <label for="trainName">Train Name</label>
+			    <input type="text" class="form-control" id="trainNameInput" placeholder="Input train name here.">
+			  </div>
+			  <div class="form-group">
+			    <label for="destination">Destination</label>
+			    <input type="text" class="form-control" id="destinationInput" placeholder="Input destination here.">
+			  </div>
+			  <div class="form-group">
+			    <label for="firstTrainTime">First Train Time (HH:MM - Military Time)</label>
+			    <input type="text" class="form-control" id="timeInput" placeholder="HH:MM - Enter using military time.">
+			  </div>
+			  <div class="form-group">
+			    <label for="frequency">Frequency (Minutes)</label>
+			    <input type="text" class="form-control" id="frequencyInput" placeholder="Input train frequency here.">
+			  </div>
+			  <button type="submit" class="btn btn-default" id="addTrain">Submit</button>
+			</form>
+		</div>
+	</div>
+
+
+	</div>
+
+
+
+
+
+
+<!-- javaScript -->
+
+<script type="text/javascript" src="assets/logic.js"></script>
+
+</body>
+</html>
