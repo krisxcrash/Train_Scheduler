@@ -8,9 +8,13 @@
 
 <!-- CSS Links -->
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css">
 
 	<link rel="stylesheet" href="assets/style.css">
+
+<!-- Google Font -->
+
+	<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
 
 <!-- jQuery -->
 	<script src="https://code.jquery.com/jquery.js"></script>
@@ -27,7 +31,7 @@
 <body>
 <!-- Header -->
 	<div class="container">
-		<div class="jumbotron">
+		<div class="jumbotron trainHeader">
 			<h1 id="header">Train Schedules</h1>
 		</div>
 
@@ -35,7 +39,7 @@
 
 	<div class="panel panel-primary">
 		<div class="panel-heading">
-			<h3 class="panel-title">Current Train Schedule</h3>
+			<h3 class="panel-title h3format">Current Train Schedule</h3>
 		</div>
 			<div class="table-responsive">
 				<table class="table" id= "trainData">
@@ -56,17 +60,17 @@
 	</div>
 	<div class="panel panel-primary">
 		<div class="panel-heading">
-			<h3 class="panel-title">Add Train</h3>
+			<h3 class="panel-title h3format">Add Train</h3>
 		</div>
 		<div class="panel-body">
 			<form>
 			  <div class="form-group">
 			    <label for="trainName">Train Name</label>
-			    <input type="text" class="form-control" id="trainNameInput" placeholder="Input train name here.">
+			    <input type="text" class="form-control" id="trainNameInput" placeholder="What train are you taking?">
 			  </div>
 			  <div class="form-group">
 			    <label for="destination">Destination</label>
-			    <input type="text" class="form-control" id="destinationInput" placeholder="Input destination here.">
+			    <input type="text" class="form-control" id="destinationInput" placeholder="Where is it going?">
 			  </div>
 			  <div class="form-group">
 			    <label for="firstTrainTime">First Train Time (HH:MM - Military Time)</label>
@@ -74,7 +78,7 @@
 			  </div>
 			  <div class="form-group">
 			    <label for="frequency">Frequency (Minutes)</label>
-			    <input type="text" class="form-control" id="frequencyInput" placeholder="Input train frequency here.">
+			    <input type="text" class="form-control" id="frequencyInput" placeholder="How frequent is the train?">
 			  </div>
 			  <button type="submit" class="btn btn-default" id="addTrain">Submit</button>
 			</form>

@@ -53,17 +53,18 @@
     var trainName2 = childSnapshot.val().name;
     var destination2 = childSnapshot.val().destination;
     var firstTrainTime2 = childSnapshot.val().firstTrain;
-    var frequency2 = parseInt(childSnapshot.val().frequency);
+    var frequency2 = childSnapshot.val().frequency;
 
         console.log(firstTrainTime2);
 
 // Create variables to calculate the times
 // debugger;
 
-    var timeDifference = moment().fromNow();
-    var remainingTime = timeDifference % frequency2;
-    var minutes = timeDifference - remainingTime;
-    var arrivalTime = moment().add(minutes, "m").format("HH:mm");
+    var timeDifference = moment().diff(moment.unix(firstTrainTime2), "minutes");
+    var remainingTime = moment().diff(moment.unix(firstTrainTime2), "minutes") % frequency2;
+    var minutes = frequency2 - remainingTime;
+
+    var arrivalTime = moment().add(minutes, "m").format("hh:mm A");
 
 
     console.log(minutes);

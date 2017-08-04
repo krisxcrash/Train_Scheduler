@@ -1,3 +1,53 @@
-table {
+
+.container {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+table,
+th, 
+h1, 
+h3 {
 	text-align: center;
+	font-family: 'Abel', sans-serif;
+}
+
+th {
+	font-weight: bolder;
+	font-size: 1.2em;
+}
+
+form {
+	font-family: 'Abel', sans-serif;
+}
+
+label {
+	text-align: center;
+	font-size: 1.2em;
+}
+
+h1 {
+	padding: 175px;
+}
+
+.h3format {
+	font-size: 1.5em;
+	font-weight: bolder;
+}
+
+#header {
+	color: white;
+}
+
+.trainHeader {
+	background: 
+		linear-gradient(
+	      rgba(0, 0, 0, 0.45), 
+	      rgba(0, 0, 0, 0.45)
+	      ),
+	    url("images/train.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0 105px 0;
 }
