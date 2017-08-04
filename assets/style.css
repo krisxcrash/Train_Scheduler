@@ -13,7 +13,8 @@ h3 {
 	font-family: 'Abel', sans-serif;
 }
 
-th {
+th,
+label {
 	font-weight: bolder;
 	font-size: 1.2em;
 }
@@ -32,8 +33,12 @@ h1 {
 }
 
 .h3format {
-	font-size: 1.5em;
+	font-size: 2em;
 	font-weight: bolder;
+}
+
+.panelFormat {
+	padding: 15px 50px;
 }
 
 #header {
